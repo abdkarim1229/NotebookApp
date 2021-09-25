@@ -17,6 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Title"
+            android:textColor="@color/white"
             android:visibility="gone" />
 
         <EditText
@@ -25,6 +26,7 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
             android:hint="Title"
+            android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
         <EditText
@@ -34,6 +36,7 @@
             android:layout_marginTop="10dp"
             android:backgroundTint="@color/white"
             android:hint="Body"
+            android:textColor="@color/white"
             android:textColorHint="@color/white" />
 
         <!--        <Button-->

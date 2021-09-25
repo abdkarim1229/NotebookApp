@@ -20,9 +20,9 @@ class UpdateActivity : AppCompatActivity() {
         setContentView(R.layout.activity_update)
 
         val intent = intent
+        val id = intent.getStringExtra("id")
         val title = intent.getStringExtra("title")
         val body = intent.getStringExtra("body")
-        val id = intent.getStringExtra("id")
 
         update_id.setText(id)
         update_title.setText(title)

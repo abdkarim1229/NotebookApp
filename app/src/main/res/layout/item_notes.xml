@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    android:background="#262636"
+    android:background="@drawable/bg_rv"
     android:padding="5dp">
 
     <TextView
@@ -29,21 +29,28 @@
         android:id="@+id/notes_updated_at"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_below="@id/notes_title"
         android:fontFamily="@font/poppins"
         android:text="Update at"
         android:textColor="@color/white"
-        android:textSize="10sp" />
+        android:textSize="8sp" />
 
     <TextView
         android:id="@+id/notes_Body"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/notes_title"
+        android:layout_below="@id/notes_updated_at"
         android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins"
         android:text="Body"
         android:textColor="@color/white"
         android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/image_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_delete" />
 
 </RelativeLayout>

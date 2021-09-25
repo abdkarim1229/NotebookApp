@@ -9,6 +9,7 @@ import com.example.notebookapp.R
 import com.example.notebookapp.activity.insert.InsertActivity
 import com.example.notebookapp.model.GET.DataGET
 import com.example.notebookapp.model.GET.ResponseGET
+import com.example.notebookapp.model.ResponseDelete
 import com.example.notebookapp.network.ApiService
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.item_notes.*
@@ -31,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         rv_notes.layoutManager = LinearLayoutManager(this)
         rv_notes.adapter = adapterNotes
         getDataNotes()
-
     }
 
     private fun getDataNotes() {
@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val notes: ResponseGET? = response.body()
                     resultNotes(notes!!)
-                    swipe.isRefreshing
                 } else {
                     Toast.makeText(this@MainActivity, "Gagal", Toast.LENGTH_SHORT).show()
                 }

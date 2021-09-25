@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1F1D2C"
     tools:context=".activity.Notes.MainActivity">
 
     <include layout="@layout/item_rv" />
@@ -16,6 +17,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:src="@drawable/ic_add"
-        android:backgroundTint="#706FC8" />
+        android:backgroundTint="#706FC8"
+        android:src="@drawable/ic_add" />
 </RelativeLayout>

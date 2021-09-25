@@ -6,9 +6,9 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.RelativeLayout
-import android.widget.TextView
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.notebookapp.R
 import com.example.notebookapp.activity.update.UpdateActivity
 import com.example.notebookapp.model.GET.DataGET
@@ -27,6 +27,7 @@ class NotesAdapter(private val listNote: ArrayList<DataGET>) :
         val update_at: TextView = itemview.findViewById(R.id.notes_updated_at)
         val notes: RelativeLayout = itemview.findViewById(R.id.notes)
         val id: TextView = itemview.findViewById(R.id.notes_id)
+        val delete: ImageView = itemview.findViewById(R.id.image_delete)
 
 
     }
@@ -42,40 +43,31 @@ class NotesAdapter(private val listNote: ArrayList<DataGET>) :
         holder.body.text = data.body
         holder.update_at.text = data.updated_at
         holder.notes.setOnClickListener {
-            val options = arrayOf<CharSequence>(
-                "Update", "Delete"
-            )
-            val builder: AlertDialog.Builder = AlertDialog.Builder(holder.notes.context)
-            builder.setTitle("Choose the Actons")
-            builder.setCancelable(true)
-            builder.setItems(options, DialogInterface.OnClickListener { dialog, position ->
-                if (position == 0) {
-                    val intent = Intent(holder.notes.context, UpdateActivity::class.java)
-                    intent.putExtra("id", listNote[position].id)
-                    intent.putExtra("title", listNote[position].title)
-                    intent.putExtra("body", listNote[position].body)
-                    holder.notes.context.startActivity(intent)
-                }
-                if (position == 1) {
-                    ApiService.endpoint.deleteNotes(data.id.toString())
-                        .enqueue(object : Callback<ResponseDelete> {
-                            override fun onResponse(
-                                call: Call<ResponseDelete>,
-                                response: Response<ResponseDelete>
-                            ) {
-
-                            }
-
-                            override fun onFailure(call: Call<ResponseDelete>, t: Throwable) {
-
-                            }
-
-                        })
-                }
-            })
-            builder.show()
+            val intent = Intent(holder.id.context, UpdateActivity::class.java)
+            intent.putExtra("id", listNote[position].id)
+            intent.putExtra("title", listNote[position].title)
+            intent.putExtra("body", listNote[position].body)
+            holder.notes.context.startActivity(intent)
         }
+        holder.delete.setOnClickListener {
+            ApiService.endpoint.deleteNotes(data.id.toString())
+                .enqueue(object : Callback<ResponseDelete> {
+                    override fun onResponse(
+                        call: Call<ResponseDelete>,
+                        response: Response<ResponseDelete>
+                    ) {
+                        if (response.isSuccessful) {
+                        }
+                    }
+
+                    override fun onFailure(call: Call<ResponseDelete>, t: Throwable) {
+
+                    }
+                })
+        }
+
     }
+
 
     override fun getItemCount() = listNote.size
 
