@@ -1,4 +1,4 @@
-package com.example.notebookapp.activity.Notes
+package com.example.notebookapp.activity.Notesbook.Notes
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,10 +6,10 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.notebookapp.R
-import com.example.notebookapp.activity.insert.InsertActivity
+import com.example.notebookapp.activity.Notesbook.CreateUsersActivity
+import com.example.notebookapp.activity.Notesbook.insert.InsertActivity
 import com.example.notebookapp.model.GET.DataGET
 import com.example.notebookapp.model.GET.ResponseGET
-import com.example.notebookapp.model.ResponseDelete
 import com.example.notebookapp.network.ApiService
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.item_notes.*
@@ -28,6 +28,10 @@ class MainActivity : AppCompatActivity() {
         float_add.setOnClickListener {
             startActivity(Intent(this, InsertActivity::class.java))
         }
+        add_user.setOnClickListener {
+            startActivity(Intent(this, CreateUsersActivity::class.java))
+        }
+
 
         rv_notes.layoutManager = LinearLayoutManager(this)
         rv_notes.adapter = adapterNotes

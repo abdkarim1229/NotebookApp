@@ -1,11 +1,11 @@
-package com.example.notebookapp.activity.update
+package com.example.notebookapp.activity.Notesbook.update
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.notebookapp.R
-import com.example.notebookapp.activity.Notes.MainActivity
+import com.example.notebookapp.activity.Notesbook.Notes.MainActivity
 import com.example.notebookapp.model.ResponseUpdate
 import com.example.notebookapp.network.ApiService
 import kotlinx.android.synthetic.main.activity_insert.*

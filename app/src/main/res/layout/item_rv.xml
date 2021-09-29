@@ -7,11 +7,19 @@
     android:background="#1F1D2C"
     android:paddingHorizontal="5dp">
 
+    <ImageView
+        android:src="@drawable/ic_add"
+        android:id="@+id/add_user"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+
+    </ImageView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_notes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/add_user"
         tools:listitem="@layout/item_notes" />
 
 </RelativeLayout>

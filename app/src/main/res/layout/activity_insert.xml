@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#1F1D2C"
-    tools:context=".activity.insert.InsertActivity">
+    tools:context=".activity.Notesbook.insert.InsertActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

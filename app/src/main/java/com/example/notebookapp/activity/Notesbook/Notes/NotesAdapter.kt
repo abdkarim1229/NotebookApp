@@ -1,16 +1,13 @@
-package com.example.notebookapp.activity.Notes
+package com.example.notebookapp.activity.Notesbook.Notes
 
-import android.app.AlertDialog
-import android.content.DialogInterface
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.notebookapp.R
-import com.example.notebookapp.activity.update.UpdateActivity
+import com.example.notebookapp.activity.Notesbook.update.UpdateActivity
 import com.example.notebookapp.model.GET.DataGET
 import com.example.notebookapp.model.ResponseDelete
 import com.example.notebookapp.network.ApiService
