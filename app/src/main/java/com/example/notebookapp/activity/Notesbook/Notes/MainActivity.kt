@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.notebookapp.R
-import com.example.notebookapp.activity.Notesbook.CreateUsersActivity
+import com.example.notebookapp.activity.Notesbook.Users.CreateUsersActivity
 import com.example.notebookapp.activity.Notesbook.insert.InsertActivity
 import com.example.notebookapp.model.GET.DataGET
 import com.example.notebookapp.model.GET.ResponseGET

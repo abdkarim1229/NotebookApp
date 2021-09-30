@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.notebookapp.R
-import com.example.notebookapp.activity.Notesbook.Notes.MainActivity
-import com.example.notebookapp.model.ResponseUpdate
+import com.example.notebookapp.model.notes.ResponseUpdate
 import com.example.notebookapp.network.ApiService
 import kotlinx.android.synthetic.main.activity_insert.*
 import kotlinx.android.synthetic.main.activity_update.*
@@ -48,7 +47,7 @@ class UpdateActivity : AppCompatActivity() {
                     Toast.makeText(this@UpdateActivity, "Failed ${it}", Toast.LENGTH_SHORT).show()
                 }
             })
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, UpdateActivity::class.java))
         }
     }
 }

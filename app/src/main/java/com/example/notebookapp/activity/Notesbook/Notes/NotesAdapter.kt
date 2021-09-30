@@ -8,8 +8,8 @@ import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notebookapp.R
 import com.example.notebookapp.activity.Notesbook.update.UpdateActivity
-import com.example.notebookapp.model.GET.DataGET
-import com.example.notebookapp.model.ResponseDelete
+import com.example.notebookapp.model.notes.GET.DataGET
+import com.example.notebookapp.model.notes.ResponseDelete
 import com.example.notebookapp.network.ApiService
 import retrofit2.Call
 import retrofit2.Callback

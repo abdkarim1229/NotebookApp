@@ -16,7 +16,13 @@
         android:theme="@style/Theme.NotebookApp"
         tools:targetApi="n">
         <activity
-            android:name=".activity.Notesbook.CreateUsersActivity"
+            android:name=".activity.Notesbook.Users.UpdateUsersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.Notesbook.Users.UsersActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activity.Notesbook.Users.CreateUsersActivity"
             android:exported="true" />
         <activity
             android:name=".activity.Notesbook.update.UpdateActivity"
@@ -26,7 +32,8 @@
             android:exported="true" />
         <activity
             android:name=".activity.Notesbook.Notes.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            tools:ignore="MissingClass">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

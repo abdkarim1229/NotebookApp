@@ -1,4 +1,4 @@
-package com.example.notebookapp.model
+package com.example.notebookapp.model.notes
 
 import com.google.gson.annotations.SerializedName
 

@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.notebookapp.R
 import com.example.notebookapp.activity.Notesbook.Notes.MainActivity
-import com.example.notebookapp.model.ResponseInsert
+import com.example.notebookapp.model.notes.ResponseInsert
 import com.example.notebookapp.network.ApiService
 import kotlinx.android.synthetic.main.activity_insert.*
 import retrofit2.Call

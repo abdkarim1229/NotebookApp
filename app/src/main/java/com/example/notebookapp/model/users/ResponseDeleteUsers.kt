@@ -1,8 +1,8 @@
-package com.example.notebookapp.model
+package com.example.notebookapp.model.users
 
 import com.google.gson.annotations.SerializedName
 
-data class ResponseUpdate(
+class ResponseDeleteUsers(
     @SerializedName("status") val status: String,
     @SerializedName("message") val message: String
 )

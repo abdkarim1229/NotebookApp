@@ -5,23 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.Notesbook.Users.CreateUsersActivity">
+    android:padding="10dp"
+    tools:context=".activity.Notesbook.Users.UpdateUsersActivity">
+
 
     <EditText
-        android:id="@+id/create_name"
+        android:id="@+id/update_users_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <EditText
+        android:id="@+id/update_users_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Name" />
 
     <EditText
-        android:id="@+id/create_username"
+        android:id="@+id/update_users_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="Username" />
 
     <EditText
-        android:id="@+id/create_email"
+        android:id="@+id/update_users_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -29,7 +37,7 @@
 
 
     <EditText
-        android:id="@+id/create_password"
+        android:id="@+id/update_users_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -41,36 +49,36 @@
         android:layout_marginTop="10dp">
 
         <RadioButton
-            android:id="@+id/create_male"
+            android:id="@+id/update_users_male"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Male" />
 
         <RadioButton
-            android:id="@+id/create_female"
+            android:id="@+id/update_users_female"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Female" />
     </RadioGroup>
 
     <EditText
-        android:id="@+id/create_alamat"
+        android:id="@+id/update_users_alamat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="Alamat" />
 
     <ImageView
-        android:id="@+id/create_image"
+        android:id="@+id/update_users_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/ic_add" />
 
     <Button
-        android:id="@+id/btn_create_users"
+        android:id="@+id/btn_update_users"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Create" />
+        android:text="Update" />
 </LinearLayout>
