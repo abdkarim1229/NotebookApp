@@ -40,7 +40,7 @@ class CreateUsersActivity : AppCompatActivity() {
         btn_create_users.setOnClickListener {
             val file = File(image)
             val req = RequestBody.create("multipart/form-data".toMediaTypeOrNull(), file)
-            val part = MultipartBody.Part.createFormData("image", file.name, req)
+            val part = MultipartBody.Part.createFormData("image", image, req)
             ApiService.endpoint.createUsers(
                 create_name.text.toString(),
                 create_username.text.toString(),

@@ -8,6 +8,7 @@ import com.example.notebookapp.model.users.GET.ResponseGetUsers
 import com.example.notebookapp.model.users.ResponseCreateUsers
 import com.example.notebookapp.model.users.ResponseDeleteUsers
 import com.example.notebookapp.model.users.ResponseUpdateUsers
+import com.example.notebookapp.model.users.login.ResponseLogin
 import okhttp3.MultipartBody
 import retrofit2.Call
 import retrofit2.http.*
@@ -72,4 +73,11 @@ interface ApiEndpoint {
     fun deleteUsers(
         @Path("id") id: String
     ): Call<ResponseDeleteUsers>
+
+    @FormUrlEncoded
+    @POST("login")
+    fun login(
+        @Field("username") username: String,
+        @Field("password") password: String
+    ) :Call<ResponseLogin>
 }

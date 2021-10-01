@@ -16,6 +16,15 @@
         android:theme="@style/Theme.NotebookApp"
         tools:targetApi="n">
         <activity
+            android:name=".activity.Notesbook.LoginActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".activity.Notesbook.Users.UpdateUsersActivity"
             android:exported="true" />
         <activity
@@ -30,16 +39,8 @@
         <activity
             android:name=".activity.Notesbook.insert.InsertActivity"
             android:exported="true" />
-        <activity
-            android:name=".activity.Notesbook.Notes.MainActivity"
-            android:exported="true"
-            tools:ignore="MissingClass">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".activity.Notesbook.Notes.MainActivity"
+            tools:ignore="MissingClass" />
 
         <meta-data
             android:name="preloaded_fonts"
