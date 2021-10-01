@@ -75,7 +75,7 @@ interface ApiEndpoint {
     ): Call<ResponseDeleteUsers>
 
     @FormUrlEncoded
-    @POST("login")
+    @POST("auth/login")
     fun login(
         @Field("username") username: String,
         @Field("password") password: String
